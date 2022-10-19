@@ -1,0 +1,23 @@
+﻿@model List<FirstSiteModel>  
+@{
+    foreach (FirstSiteModel site in Model)
+    {
+        FirstSiteModel oldsiteModel = site;
+    <tr>
+        <td>
+            @site.Id
+        </td>
+        <td>
+            @site.Name
+        </td>
+        <td>
+            @site.Description
+        </td>
+        <td>
+            <a href="@Url.Action("Edit", "First", oldsiteModel)"><h3>Edit</h3></a>
+            <a href="@Url.Action("Delete", "First", oldsiteModel)"><h3>Delete</h3></a>
+        </td>
+    </tr>
+    }
+}
+<a href ="@Url.Action("Create", "First")"><h2>Тыкни, чтобы загрузить сайт</h2></a>

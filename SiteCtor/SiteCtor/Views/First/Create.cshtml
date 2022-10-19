@@ -1,0 +1,12 @@
+﻿@model FirstSiteModel
+<form asp-action="Create" asp-controller="First" asp-antiforgery="true" method="post">
+    <div>
+        <label asp-for="@Model.Name"></label>
+        <input asp-for="@Model.Name" />
+    </div>
+    <div>
+        <label asp-for="@Model.Description"></label>
+        <input asp-for="@Model.Description" />
+    </div>
+    <input type="submit" value="Save" />
+</form>
